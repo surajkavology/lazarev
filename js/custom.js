@@ -1,3 +1,8 @@
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+})
+
 var hcontainer = document.querySelector(".site-header > .container")
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -118,11 +123,6 @@ video.addEventListener("click", function(){
     });
 });
 
-const lenis = new Lenis()
-
-lenis.on('scroll', (e) => {
-//   console.log(e)
-})
 
 
 

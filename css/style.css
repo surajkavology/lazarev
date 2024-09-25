@@ -459,9 +459,10 @@ header.site-header {
     font-size: 18px;
 }
 .hover-video-content p {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     font-family: "open", sans-serif;
+    line-height: 1.5;
 }
 i.ri-arrow-right-up-line{
     position: relative;

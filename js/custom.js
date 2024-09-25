@@ -164,30 +164,34 @@ hvideo.addEventListener("mousemove", function(dets){
 
 });
 
-let videoIt =  document.querySelectorAll(".video-card-sec .item")
- videoIt.forEach(function(item){
-  let  videoCard = item.querySelector(".video-card-video")
-  let  vid = item.querySelector("video")
-item.addEventListener("mouseenter", function(){
-gsap.to(videoCard,{
-    height: 500,
-    y:-200,
-    duration: 0.5
-});
-vid.play()
-console.log(vid)
+let videoIt = document.querySelectorAll(".video-card-sec .item");
+
+videoIt.forEach(function(item) {
+  let videoCard = item.querySelector(".video-card-video");
+  let vid = item.querySelector("video");
+
+  item.addEventListener("mouseenter", function() {
+    gsap.to(videoCard, {
+      height: 500,
+      y: -200,
+      duration: 0.5
+    });
+
+    vid.currentTime = 0; // Reset video to the start
+    vid.play(); // Play the video
+  });
+
+  item.addEventListener("mouseleave", function() {
+    gsap.to(videoCard, {
+      height: 300,
+      y: 0,
+      duration: 0.5
+    });
+
+    vid.pause(); // Pause the video
+  });
 });
 
-item.addEventListener("mouseleave", function(){
-    gsap.to(videoCard,{
-        height: 300,
-        y:-0,
-        duration: 0.5
-    });
-    vid.pause()
-    console.log(vid)
-    });
- });
 
 
 // faq start 

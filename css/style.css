@@ -22,6 +22,7 @@ img, video{
 
 p{
     font-family: "open", sans-serif;
+    line-height: 1.5;
 }
 
 .grid {
@@ -445,18 +446,25 @@ header.site-header {
     font-size: 32px;
     font-weight: 400;
     font-family: "open", sans-serif;
-    border-top: 1px solid #ddd;
     padding-top: 20px;
     margin: 0 0 30px;
     transition: all 0.2s ease-in-out;
+    position: relative;
 }
-.hover-video-content:hover h4 {
-    border-width: 2px;
-    border-color: #000;
-    
+.hover-video-content h4::before{
+    content: "";
+    position:absolute;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.2s linear;
+}
+.hover-video-content:hover h4::before{
+    border-top: 2px solid #000;
 }
 .hover-video-content h4 i {
-    font-size: 18px;
+    font-size: 24px;
 }
 .hover-video-content p {
     font-size: 20px;
@@ -469,24 +477,7 @@ i.ri-arrow-right-up-line{
     overflow: hidden;
     transition: all 0.2s ease-in-out;
 }
-i.ri-arrow-right-up-line::after {
-    content: "\ea70";
-    position: absolute;
-    left: 0;
-    top: 100%;
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-}
 
-.arrow-hover:hover i.ri-arrow-right-up-line::after {
-    top: 0;
-    opacity: 1;
-}
-
-.arrow-hover:hover i.ri-arrow-right-up-line::before {
-    top: -100%;
-    opacity: 0;
-}
 
 .hover-video{
     position: relative;
@@ -630,6 +621,10 @@ footer.site-footer {
     font-weight: 400;
     margin: 0 0 10px;
     display: inline-block;
+    transition: all 0.2s linear;
+}
+.footer-middle li a:hover{
+    opacity: 0.5;
 }
 .privacy_terms {
     display: flex;
@@ -724,4 +719,49 @@ button.accordion span {
 
 button.accordion.active svg {
     transform: rotate(180deg);
+}
+
+.process {
+    padding: 80px 0;
+}
+
+.process-wrap .grid {
+    grid-template-columns: 1.5fr 1.4fr 1.3fr 1.2fr 1fr;
+    border-top: 1px solid #dadada;
+}
+.process-wrap .grid .item {
+    border-right: 1px solid #dadada;
+    padding: 30px 10px 0;
+}
+.process-wrap .grid .item:last-child{
+    border-right:none;
+}
+.process-wrap .grid .item h4 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Open Sans';
+    margin: 0 0 40px;
+}
+.process-wrap .grid .item li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #111;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 40px;
+    font-size: 14px;
+}
+.process-wrap .grid .item li:not(:last-child){
+    margin: 0 0 2px;
+}
+.process-wrap .grid .item li span {
+    display: inline-block;
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #3d3d3d;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
 }

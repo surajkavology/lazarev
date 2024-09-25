@@ -202,3 +202,20 @@ $(document).ready(function(){
         $(this).toggleClass("active").siblings().removeClass("active");
     });
 });
+
+// process label 
+
+gsap.from(".process-wrap .grid .item li",{
+x:0,
+duration:1.5,
+stagger:{
+amount: -0.3
+},
+scrollTrigger:{
+    trigger: ".process-wrap .grid .item li",
+    scroller: "body",
+    start: "top 80%",
+    end: "top 0%",
+    scrub: true
+}
+});

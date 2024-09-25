@@ -751,6 +751,8 @@ button.accordion.active svg {
     padding: 6px 10px;
     border-radius: 40px;
     font-size: 14px;
+    transform: translateX(calc(var(--i) * 20px));
+    transform: translateX(calc((var(--i) - 1) * 20px));
 }
 .process-wrap .grid .item li:not(:last-child){
     margin: 0 0 2px;

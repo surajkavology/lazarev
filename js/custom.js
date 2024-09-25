@@ -219,3 +219,15 @@ scrollTrigger:{
     scrub: true
 }
 });
+
+gsap.to(".process-wrap .grid .item hr", {
+    height: "100%",
+    duration:1.5,
+    scrollTrigger:{
+        trigger: ".process-wrap .grid .item hr",
+        scroller:"body",
+        start: "top 80%",
+        end: "top 0%",
+        scrub: true
+    }
+});

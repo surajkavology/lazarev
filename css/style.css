@@ -733,6 +733,7 @@ button.accordion.active svg {
 .process-wrap .grid {
     grid-template-columns: 1.5fr 1.4fr 1.3fr 1.2fr 1fr;
     border-top: 1px solid #dadada;
+    gap:1px;
 }
 .process-wrap .grid .item {
     padding: 30px 10px 0;

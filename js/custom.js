@@ -141,6 +141,7 @@ hoverVideo.forEach(function(hvideo){
 hvideo.addEventListener("mouseenter", function(){
 //    console.log(hvideo.childNodes)
    hvideo.childNodes[5].style.opacity = 0;
+   hvideo.childNodes[3].currentTime = 0;
    hvideo.childNodes[3].play();
    gsap.to(hvideo.childNodes[1],{
     scale:1

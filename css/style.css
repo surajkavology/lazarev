@@ -730,7 +730,6 @@ button.accordion.active svg {
     border-top: 1px solid #dadada;
 }
 .process-wrap .grid .item {
-    /* border-right: 1px solid #dadada; */
     padding: 30px 10px 0;
     position: relative;
 }
@@ -748,7 +747,7 @@ button.accordion.active svg {
 }
 .process-wrap .grid .item h4 {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     font-family: 'Open Sans';
     margin: 0 0 40px;
 }
